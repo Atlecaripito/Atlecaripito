@@ -1,0 +1,407 @@
+/*.::ESCUELA DE FÚTBOL ATLÉTICO CARIPITO 11/09/2026::.*/
+:root {
+    --club-night: #0b1f33;
+    --club-blue: #164d73;
+    --club-red: #c44a45;
+    --club-coral: #e49b91;
+    --club-paper: #fbfaf7;
+    --club-line: rgba(11,31,51,.14);
+    --club-shadow: 0 22px 55px rgba(11,31,51,.16);
+}
+
+body {
+    background: var(--club-paper);
+    overflow-x: hidden;
+}
+
+img, video, iframe { max-width: 100%; }
+button, input, select, textarea { max-width: 100%; }
+.table-wrap { max-width: 100%; -webkit-overflow-scrolling: touch; }
+
+.topbar, .header {
+    background: var(--club-night) !important;
+    border-bottom: 0 !important;
+}
+
+.topbar .logo, .header .logo, .topbar .nav-links a, .header .nav-links a, .header .submenu-button {
+    color: #fff !important;
+}
+
+.topbar .logo span span, .header .logo span span {
+    color: var(--club-coral) !important;
+}
+
+.topbar .nav-links a:hover, .topbar .nav-links .active, .header .nav-links a:hover, .header .nav-cta {
+    color: #fff !important;
+    background: var(--club-red) !important;
+}
+
+.topbar .menu-toggle, .header .menu-button {
+    color: #fff !important;
+}
+
+.hero {
+    min-height: 620px;
+    display: grid;
+    align-items: end;
+    padding: 90px 0 78px;
+    background: linear-gradient(90deg, rgba(11,31,51,.98) 0%, rgba(11,31,51,.82) 48%, rgba(11,31,51,.35)), url("imagen/logo.png") 88% 48% / 460px no-repeat, var(--club-night);
+}
+
+.hero-content {
+    max-width: 770px;
+}
+
+.hero h1, .header + main .hero h1 {
+    max-width: 800px;
+    font-size: clamp(3.2rem, 7vw, 5rem);
+    letter-spacing: -.02em;
+}
+
+.hero h1 span { color: var(--club-coral); }
+.hero-actions { gap: 10px; }
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading h2, .section-heading h1 {
+    max-width: 760px;
+    font-size: clamp(2.25rem, 4.8vw, 4.35rem);
+    letter-spacing: -.02em;
+}
+
+.section-heading {
+    position: relative;
+    padding-left: 22px;
+    border-left: 3px solid var(--club-red);
+}
+
+.paper, .card, .category-card, .panel {
+    border-radius: 4px !important;
+    box-shadow: 0 10px 28px rgba(11,31,51,.07) !important;
+}
+
+.paper:hover, .card:hover, .category-card:hover, .panel:hover {
+    box-shadow: var(--club-shadow) !important;
+}
+
+.category-grid, .cards {
+    gap: 16px;
+}
+
+.category-card, .card {
+    border-top: 4px solid var(--club-red);
+}
+
+.category-body h3, .card h3 {
+    font-size: 1.75rem;
+}
+
+.quote-band, .contact {
+    background: var(--club-night) !important;
+}
+
+.quote p {
+    max-width: 900px;
+    margin-inline: auto;
+    font-size: clamp(2rem, 4vw, 4.2rem);
+}
+
+.button, .button-solid, .hero-button {
+    border-radius: 3px !important;
+    letter-spacing: .02em;
+}
+
+.story-photo {
+    border-radius: 4px;
+    box-shadow: var(--club-shadow);
+}
+
+.site-footer, footer {
+    color: #afbeca;
+    background: var(--club-night);
+}
+
+.site-footer .container, footer .container {
+    color: #afbeca;
+}
+
+.footer-layout {
+    display: grid !important;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 0;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-brand img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.footer-center { text-align: center; }
+.footer-center strong { display: block; color: #fff; font-family: "Barlow Condensed", sans-serif; font-size: 1.45rem; line-height: 1; }
+.footer-center span, .footer-center small { display: block; margin-top: 6px; color: #afbeca; font-size: .82rem; }
+.footer-center small { margin-top: 10px; font-size: .72rem; }
+
+.social-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+.social-copy strong {
+    display: block;
+    color: #fff;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.social-copy span {
+    display: block;
+    margin-top: 6px;
+    color: #afbeca;
+    font-size: .85rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.social-link {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.24);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(255,255,255,.06);
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.social-link:hover {
+    color: #fff;
+    border-color: var(--club-coral);
+    background: var(--club-red);
+    transform: translateY(-3px);
+}
+
+.social-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 21px;
+    height: 21px;
+    line-height: 1;
+}
+
+.social-icon svg { width: 20px; height: 20px; fill: currentColor; }
+.social-link .social-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.social-link[data-tooltip]::after { position: absolute; right: 0; bottom: calc(100% + 9px); padding: 5px 8px; border-radius: 4px; color: #fff; background: var(--club-red); content: attr(data-tooltip); font-size: .7rem; font-weight: 800; opacity: 0; pointer-events: none; transform: translateY(4px); transition: .2s ease; white-space: nowrap; }
+.social-link[data-tooltip]:hover::after { opacity: 1; transform: translateY(0); }
+
+.social-share {
+    border-color: var(--club-coral);
+    color: var(--club-coral);
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .footer-layout { grid-template-columns: 1fr; gap: 22px; text-align: center; }
+    .footer-brand { justify-content: center; }
+    .social-footer { align-items: center; flex-direction: column; }
+    .social-links { justify-content: center; flex-wrap: nowrap; }
+}
+
+/* Portada: mismo modelo visual, con nombres de clase propios. */
+.header .nav-links {
+    gap: 3px;
+}
+
+.header .hero {
+    min-height: 650px;
+    grid-template-columns: 1fr;
+}
+
+.header + main .hero-content {
+    width: min(680px, 90%);
+    margin-inline: auto;
+}
+
+.hero-content > * {
+    opacity: 0;
+    transform: translateX(-54px);
+    animation: heroTextIn .75s cubic-bezier(.2,.75,.25,1) forwards;
+}
+
+.hero-content > :nth-child(1) { animation-delay: .12s; }
+.hero-content > :nth-child(2) { animation-delay: .28s; }
+.hero-content > :nth-child(3) { animation-delay: .44s; }
+.hero-content > :nth-child(4) { animation-delay: .6s; }
+
+.auth-intro > * {
+    opacity: 0;
+    transform: translateX(-48px);
+    animation: heroTextIn .75s cubic-bezier(.2,.75,.25,1) forwards;
+}
+
+.auth-intro > :nth-child(1) { animation-delay: .12s; }
+.auth-intro > :nth-child(2) { animation-delay: .28s; }
+.auth-intro > :nth-child(3) { animation-delay: .44s; }
+.auth-grid > .panel {
+    opacity: 0;
+    transform: translateX(48px);
+    animation: heroImageIn .85s cubic-bezier(.2,.75,.25,1) .34s forwards;
+}
+
+@keyframes heroTextIn {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroImageIn {
+    to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.home-carousel {
+    position: relative;
+    width: min(1080px, 94%);
+    height: clamp(430px, 58vw, 680px);
+    margin: 0 auto;
+    justify-self: center;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 6px;
+    background: #102a43;
+    box-shadow: 0 24px 60px rgba(0,0,0,.3);
+}
+
+.home-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: end;
+    padding: clamp(24px, 4vw, 58px);
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+    transition: opacity .55s ease, transform 5s ease;
+    transform: scale(1.04);
+}
+
+.home-slide::before {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(11,31,51,.92), rgba(11,31,51,.04) 68%);
+    content: "";
+}
+
+.home-slide.active { opacity: 1; transform: scale(1); }
+.home-slide-content { position: relative; z-index: 1; }
+.home-slide-kicker { color: var(--club-coral); font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.home-slide h2 { max-width: 650px; margin: 7px 0 0; color: #fff; font-family: "Barlow Condensed", sans-serif; font-size: clamp(2.35rem, 4.8vw, 4.8rem); line-height: .92; }
+.home-slide p { max-width: 540px; margin: 12px 0 0; color: #dbe5eb; font-size: clamp(.9rem, 1.5vw, 1.1rem); }
+.carousel-controls { position: absolute; z-index: 2; top: 18px; right: 18px; display: flex; gap: 6px; }
+.carousel-controls button { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; color: #fff; background: rgba(11,31,51,.5); cursor: pointer; }
+.carousel-controls button:hover { background: var(--club-red); }
+.carousel-dots { position: absolute; z-index: 2; right: clamp(24px, 4vw, 58px); bottom: clamp(22px, 4vw, 46px); display: flex; gap: 6px; }
+.carousel-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.5); cursor: pointer; }
+.carousel-dot.active { width: 24px; border-radius: 8px; background: var(--club-coral); }
+.carousel-counter { position: absolute; z-index: 2; bottom: clamp(22px, 4vw, 46px); left: clamp(24px, 4vw, 58px); color: #fff; font-family: "Barlow Condensed", sans-serif; font-size: clamp(1.1rem, 2vw, 1.6rem); }
+
+.header + main .section-heading {
+    border-left-color: var(--club-red);
+}
+
+.header + main .about-image {
+    border-radius: 4px;
+    box-shadow: var(--club-shadow);
+}
+
+.header + main .card {
+    border-radius: 4px;
+    border-top: 4px solid var(--club-red);
+}
+
+.header + main .energy-section {
+    background: var(--club-night);
+}
+
+@media (max-width: 850px) {
+    .topbar .nav-links, .header .nav-links {
+        background: var(--club-night) !important;
+        border-color: rgba(255,255,255,.16) !important;
+    }
+
+    .topbar .nav-links a, .header .nav-links a {
+        color: #fff !important;
+    }
+
+    .home-carousel {
+        width: 94%;
+        height: clamp(330px, 72vw, 520px);
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 560px) {
+    .home-carousel {
+        width: 100%;
+        height: 420px;
+        border-radius: 0;
+    }
+
+    .home-slide { padding: 24px 20px 62px; }
+    .home-slide h2 { font-size: clamp(2.25rem, 11vw, 3.5rem); }
+    .home-slide p { font-size: .88rem; }
+    .carousel-controls { top: 14px; right: 14px; }
+    .carousel-controls button { width: 32px; height: 32px; }
+    .carousel-counter { left: 20px; bottom: 24px; }
+    .carousel-dots { right: 20px; bottom: 26px; }
+
+    .hero-content > *, .auth-intro > * {
+        transform: translateY(28px);
+        animation-name: heroTextMobileIn;
+    }
+
+    .auth-grid > .panel { transform: translateY(34px); animation-name: heroImageMobileIn; }
+
+    .home-carousel { transform: translateY(34px) scale(.97); animation: heroImageMobileIn .95s cubic-bezier(.2,.75,.25,1) .34s forwards; }
+}
+
+@keyframes heroTextMobileIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroImageMobileIn {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 560px) {
+    .hero, .header + main .hero {
+        min-height: 570px;
+        padding: 76px 0 62px;
+    }
+
+    .section {
+        padding: 72px 0;
+    }
+}
+/*.::ESCUELA DE FÚTBOL ATLÉTICO CARIPITO 11/09/2026::.*/
